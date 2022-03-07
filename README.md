@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Emerging stories  - a project initialised with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The application tracks articles of interest emerging in various regions included in the BBC World Service portfolio of language websites. 
 
 ## Available Scripts
 
