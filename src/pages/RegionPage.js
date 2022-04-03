@@ -39,12 +39,13 @@ const RegionPage = () => {
             </a>{" "}
             and{" "}
             <a
-              href="https://translate.google.com/"
+              href="https://www.microsoft.com/en-us/translator/business/translator-api/"
               className="text-decoration-none"
             >
-              Google Translate
+              Microsoft Translator
             </a>{" "}
             to identify articles accessed by an increasing number of visitors.
+            Titles are automatically translated where possible.
           </p>
           <p>
             Use the menu to view selections of articles popular in various{" "}

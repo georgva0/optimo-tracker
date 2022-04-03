@@ -26,9 +26,9 @@ const Navigation = () => {
             <NavItem>
               <NavLink href="/africa">Africa</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="/asia-central">Asia (Central)</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink href="/asia-pacific">Asia (Pacific)</NavLink>
             </NavItem>

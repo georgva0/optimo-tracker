@@ -23,24 +23,25 @@ const HomePage = () => {
               This application uses the{" "}
               <a
                 href="https://docs.chartbeat.com/cbp/api/real-time-apis"
-                className="text-decoration-none"
+                className="text-dark text-decoration-none underline"
               >
                 Chartbeat API
               </a>{" "}
               and{" "}
               <a
-                href="https://translate.google.com/"
-                className="text-decoration-none"
+                href="https://www.microsoft.com/en-us/translator/business/translator-api/"
+                className="text-dark text-decoration-none underline"
               >
-                Google Translate
+                Microsoft Translator
               </a>{" "}
               to identify articles accessed by an increasing number of visitors.
+              Titles are automatically translated where possible.
             </p>
             <p>
               Use the menu to view selections of articles popular in various{" "}
               <a
                 href="https://www.bbc.co.uk/ws/languages"
-                className="text-decoration-none"
+                className="text-dark text-decoration-none underline"
               >
                 BBC World Service
               </a>{" "}
@@ -67,8 +68,7 @@ const HomePage = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                 </CardTitle>
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum.
+                  2 April 2022
                 </CardSubtitle>
               </CardBody>
             </Card>
