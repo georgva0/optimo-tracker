@@ -77,7 +77,7 @@ const HomePage = () => {
                 {" "}
                 <Card className="border-0">
                   <Badge color="danger" className="mb-2">
-                    BBC {article.section.toUpperCase()}
+                    BBC NEWS | {article.section.toUpperCase()}
                   </Badge>
                   <a href={`https://${article.url}`} className="stretched-link">
                     <CardImg
