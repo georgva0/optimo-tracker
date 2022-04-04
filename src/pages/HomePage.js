@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Loader from "../components/Loader";
 import {
   Container,
   Card,
@@ -8,9 +9,27 @@ import {
   CardSubtitle,
   Row,
   Col,
+  Badge,
 } from "reactstrap";
 
 const HomePage = () => {
+  const [articles, setArticles] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/all")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          setArticles(data);
+        }
+      })
+      .catch((error) => console.log(error))
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
   return (
     <Container className="content-container">
       <>
@@ -51,177 +70,33 @@ const HomePage = () => {
         </Row>
 
         <Row md="4" sm="2" xs="1" className="mt-3">
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <a href="#" className="stretched-link">
-                <CardImg
-                  alt="Card image cap"
-                  src="https://picsum.photos/318/180"
-                  top
-                  width="100%"
-                />
-              </a>
+          {isLoading && <Loader />}
+          {articles &&
+            articles.map((article, key) => (
+              <Col key={key}>
+                {" "}
+                <Card className="border-0">
+                  <Badge color="danger" className="mb-2">
+                    BBC {article.section.toUpperCase()}
+                  </Badge>
+                  <a href={`https://${article.url}`} className="stretched-link">
+                    <CardImg
+                      alt={article.imageAlt}
+                      src={article.imageHref}
+                      top
+                      width="100%"
+                    />
+                  </a>
 
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  2 April 2022
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <a href="#" className="stretched-link">
-                <CardImg
-                  alt="Card image cap"
-                  src="https://picsum.photos/318/180"
-                  top
-                  width="100%"
-                />
-              </a>
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
+                  <CardBody className="mx-0 px-0">
+                    <CardTitle tag="h5">{article.translatedTitle} </CardTitle>
+                    <CardSubtitle className="mb-2 text-muted" tag="h6">
+                      {article.lastPublished}
+                    </CardSubtitle>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
         </Row>
       </>
     </Container>
