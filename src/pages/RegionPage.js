@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Loader from "../components/Loader";
 import {
   Container,
   Card,
@@ -8,16 +9,34 @@ import {
   CardSubtitle,
   Row,
   Col,
+  Badge,
 } from "reactstrap";
 import { useParams } from "react-router-dom";
 import regionsURL from "../listings/regions";
 import NotFound from "./NotFound";
 
 const RegionPage = () => {
+  const [articles, setArticles] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
   const { region } = useParams();
   const regionName = regionsURL.find(
     (regionName) => regionName.serviceUrl === region
   );
+
+  useEffect(() => {
+    fetch(`http://localhost:8000/api/${region}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          setArticles(data);
+        }
+      })
+      .catch((error) => console.log(error))
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [region]);
 
   if (!regionName) return <NotFound />;
 
@@ -33,14 +52,14 @@ const RegionPage = () => {
             This application uses the{" "}
             <a
               href="https://docs.chartbeat.com/cbp/api/real-time-apis"
-              className="text-decoration-none"
+              className="text-dark text-decoration-none underline"
             >
               Chartbeat API
             </a>{" "}
             and{" "}
             <a
               href="https://www.microsoft.com/en-us/translator/business/translator-api/"
-              className="text-decoration-none"
+              className="text-dark text-decoration-none underline"
             >
               Microsoft Translator
             </a>{" "}
@@ -48,10 +67,10 @@ const RegionPage = () => {
             Titles are automatically translated where possible.
           </p>
           <p>
-            Use the menu to view selections of articles popular in various{" "}
+            Use the menu to view selections of articles popular in other{" "}
             <a
               href="https://www.bbc.co.uk/ws/languages"
-              className="text-decoration-none"
+              className="text-dark text-decoration-none underline"
             >
               BBC World Service
             </a>{" "}
@@ -61,178 +80,36 @@ const RegionPage = () => {
       </Row>
       <>
         <Row md="4" sm="2" xs="1" className="mt-3">
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <a href="#" className="stretched-link">
-                <CardImg
-                  alt="Card image cap"
-                  src="https://picsum.photos/318/180"
-                  top
-                  width="100%"
-                />
-              </a>
+          {isLoading && <Loader />}
+          {articles &&
+            articles.map((article, key) => (
+              <Col key={key}>
+                {" "}
+                <Card className="border-0">
+                  <Badge color="secondary" className="mb-2">
+                    BBC NEWS |{" "}
+                    {article.section.toUpperCase() === "PORTUGUESE"
+                      ? "BRAZIL"
+                      : article.section.toUpperCase()}
+                  </Badge>
+                  <a href={`https://${article.url}`} className="stretched-link">
+                    <CardImg
+                      alt={article.imageAlt}
+                      src={article.imageHref}
+                      top
+                      width="100%"
+                    />
+                  </a>
 
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <a href="#" className="stretched-link">
-                <CardImg
-                  alt="Card image cap"
-                  src="https://picsum.photos/318/180"
-                  top
-                  width="100%"
-                />
-              </a>
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            {" "}
-            <Card className="border-0">
-              <CardImg
-                alt="Card image cap"
-                src="https://picsum.photos/318/180"
-                top
-                width="100%"
-              />
-              <CardBody className="mx-0 px-0">
-                <CardTitle tag="h5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </CardTitle>
-                <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  Vivamus ac tristique dolor, at laoreet ante. Proin a risus at
-                  risus accumsan condimentum. Aliquam id aliquam enim. Donec
-                  laoreet dui fringilla.
-                </CardSubtitle>
-              </CardBody>
-            </Card>
-          </Col>
+                  <CardBody className="mx-0 px-0">
+                    <CardTitle tag="h5">{article.translatedTitle} </CardTitle>
+                    <CardSubtitle className="mb-2 text-muted" tag="h6">
+                      {article.lastPublished}
+                    </CardSubtitle>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
         </Row>
       </>
     </Container>
