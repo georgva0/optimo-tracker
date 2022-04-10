@@ -36,7 +36,7 @@ const HomePage = () => {
         <Row>
           <Col md="10">
             <h3 className="mt-5">
-              BBC World Service articles with increased traffic{" "}
+              BBC World Service ｜ Articles becoming popular{" "}
             </h3>
             <p className="mt-4">
               This application uses the{" "}
@@ -46,15 +46,15 @@ const HomePage = () => {
               >
                 Chartbeat API
               </a>{" "}
-              and{" "}
+              to identify WS languages articles accessed by an increasing number
+              of visitors. Titles are automatically translated with{" "}
               <a
                 href="https://www.microsoft.com/en-us/translator/business/translator-api/"
                 className="text-dark text-decoration-none underline"
               >
                 Microsoft Translator
               </a>{" "}
-              to identify articles accessed by an increasing number of visitors.
-              Titles are automatically translated where possible.
+              where possible.
             </p>
             <p>
               Use the menu to view selections of articles popular in various{" "}
