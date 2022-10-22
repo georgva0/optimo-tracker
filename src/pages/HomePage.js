@@ -833,12 +833,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                BENGALI
+                <a
+                  href="https://tagging-monitor.netlify.app/bengali"
+                  className="link-light text-decoration-none"
+                >
+                  BENGALI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/bengali"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -855,12 +856,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                GUJARATI
+                <a
+                  href="https://tagging-monitor.netlify.app/gujarati"
+                  className="link-light text-decoration-none"
+                >
+                  GUJARATI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/gujarati"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -877,12 +879,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                HINDI
+                <a
+                  href="https://tagging-monitor.netlify.app/hindi"
+                  className="link-light text-decoration-none"
+                >
+                  HINDI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/hindi"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -899,12 +902,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                MARATHI
+                <a
+                  href="https://tagging-monitor.netlify.app/marathi"
+                  className="link-light text-decoration-none"
+                >
+                  MARATHI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/marathi"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -921,12 +925,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                NEPALI
+                <a
+                  href="https://tagging-monitor.netlify.app/nepali"
+                  className="link-light text-decoration-none"
+                >
+                  NEPALI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/nepali"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -943,12 +948,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                PASHTO
+                <a
+                  href="https://tagging-monitor.netlify.app/pashto"
+                  className="link-light text-decoration-none"
+                >
+                  PASHTO
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/pashto"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -965,12 +971,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                PUNJABI
+                <a
+                  href="https://tagging-monitor.netlify.app/marathi"
+                  className="link-light text-decoration-none"
+                >
+                  PUNJABI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/marathi"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -987,12 +994,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                SINHALA
+                <a
+                  href="https://tagging-monitor.netlify.app/sinhala"
+                  className="link-light text-decoration-none"
+                >
+                  SINHALA
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/sinhala"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1009,12 +1017,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                TAMIL
+                <a
+                  href="https://tagging-monitor.netlify.app/tamil"
+                  className="link-light text-decoration-none"
+                >
+                  TAMIL
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/tamil"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1031,12 +1040,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                TELUGU
+                <a
+                  href="https://tagging-monitor.netlify.app/telugu"
+                  className="link-light text-decoration-none"
+                >
+                  TELUGU
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/telugu"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1053,12 +1063,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                URDU
+                <a
+                  href="https://tagging-monitor.netlify.app/urdu"
+                  className="link-light text-decoration-none"
+                >
+                  URDU
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/urdu"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1083,12 +1094,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                AZERI
+                <a
+                  href="https://tagging-monitor.netlify.app/azeri"
+                  className="link-light text-decoration-none"
+                >
+                  AZERI
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/azeri"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1105,12 +1117,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                RUSSIAN
+                <a
+                  href="https://tagging-monitor.netlify.app/russian"
+                  className="link-light text-decoration-none"
+                >
+                  RUSSIAN
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/russian"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1127,12 +1140,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                SERBIAN
+                <a
+                  href="https://tagging-monitor.netlify.app/serbian"
+                  className="link-light text-decoration-none"
+                >
+                  SERBIAN
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/serbian"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1149,12 +1163,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                TURKCE
+                <a
+                  href="https://tagging-monitor.netlify.app/turkce"
+                  className="link-light text-decoration-none"
+                >
+                  TURKCE
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/turkce"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1171,12 +1186,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                UKRAINIAN
+                <a
+                  href="https://tagging-monitor.netlify.app/ukrainian"
+                  className="link-light text-decoration-none"
+                >
+                  UKRAINIAN
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/ukrainian"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1201,12 +1217,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                BRASIL
+                <a
+                  href="https://tagging-monitor.netlify.app/portuguese"
+                  className="link-light text-decoration-none"
+                >
+                  BRASIL
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/portuguese"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1223,12 +1240,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                MUNDO
+                <a
+                  href="https://tagging-monitor.netlify.app/mundo"
+                  className="link-light text-decoration-none"
+                >
+                  MUNDO
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/mundo"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1253,12 +1271,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                ARABIC
+                <a
+                  href="https://tagging-monitor.netlify.app/arabic"
+                  className="link-light text-decoration-none"
+                >
+                  ARABIC
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/arabic"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
@@ -1275,12 +1294,13 @@ const HomePage = () => {
           <Col>
             <Card className="border-0">
               <Badge color="secondary" className="mb-2">
-                PERSIAN
+                <a
+                  href="https://tagging-monitor.netlify.app/persian"
+                  className="link-light text-decoration-none"
+                >
+                  PERSIAN
+                </a>
               </Badge>
-              <a
-                href="https://tagging-monitor.netlify.app/persian"
-                className="link-light text-decoration-none"
-              ></a>
 
               <CardBody className="mx-0 px-0">
                 <PieChart
