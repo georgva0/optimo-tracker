@@ -2,17 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import { PieChart } from "react-minimal-pie-chart";
 
-import {
-  Container,
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Row,
-  Col,
-  Badge,
-} from "reactstrap";
+import { Container, Card, CardBody, Row, Col, Badge } from "reactstrap";
 
 const HomePage = () => {
   //const [articles, setArticles] = useState();
