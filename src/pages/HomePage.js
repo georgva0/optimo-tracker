@@ -321,8 +321,8 @@ const HomePage = () => {
               >
                 BBC World Service
               </a>{" "}
-              editorial teams by tracking the last ten published articles.
-              (Update interval:{" "}
+              editorial teams by tracking the top ten articles published on the
+              WS languages front pages. (Update interval:{" "}
               <span className="text-danger">
                 <strong>60</strong>
               </span>{" "}
